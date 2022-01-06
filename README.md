@@ -1,7 +1,3 @@
 # SITE QUE BUSCA POR INFORMAÇÕES DE DOMINIOS E IPs
 
-
-
-
-
-
+Oi
