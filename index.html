@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/Assets/style/css/style.css">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+    <title>IpCats</title> 
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="home_ip">
+            <h1>IpCats</h1>
+            <p id="ip_user">IP:000.00.0.0</p>
+        </div>
+    </header>
+    <main>
+
+        <div class="home">
+            <div class="text">
+                <h1>SITE PARA BUS- CAR IP</h1>
+                <p>Criado com o intuito de buscar por Ip de maquinas e dominios de sites.</p>
+            </div>
+            <div class="image">
+                <img src="./src/Assets/image/world-connect.svg" alt="">
+            </div>
+        </div>
+        <div class="ip_domain">
+            <div class="ip_dns">
+                <p>DIGITE O IP/DOMINIO DESEJADO:</p>
+                <div class="input_search">
+                    <input type="text" id="ip_dnsSearch" placeholder="IP/DOMAINS">
+                    <input type="button" id="search" value="SEARCH">
+                </div>
+            </div>
+
+            <div class="result_ipcats">
+                <hr>
+                <div class="city_estate">
+                    <div id="city_estate">
+                        <p>Cidade, Estado:</p>
+                        <h1>NENHUM</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="ips_domains">
+                    <div id="ips_domains">
+                        <p>Ip/Domain:</p>
+                        <h1>NENHUM</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="continent">
+                    <div id="continent">
+                        <p>Continente:</p>
+                        <h1>NENHUM</h1>
+                    </div>
+                </div>
+                <hr>
+                <div class="país">
+                    <div id="país">
+                        <p>País:</p>
+                        <div id="pa">
+                            <div id="info">
+
+                            </div>
+                            <h1>NENHUM</h1>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container_map">
+                <div id="map">
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script src="./src/Apps/script/emoji_twitter.js"></script>
+<script src="./src/Apps/script/index.js"></script>
+</body>
+</html>

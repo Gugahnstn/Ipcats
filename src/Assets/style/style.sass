@@ -1,0 +1,153 @@
+@import variavel.sass
+
+*
+    margin: 0px
+    padding: 0px
+    font-size: 16px
+    box-sizing: border-box
+
+.container
+    justify-content: space-between
+    margin: 0 auto
+    width: 1200px
+    header
+        font-family: $roboto-mono
+        background-color: #fff
+        align-items: center
+        margin-top: 10px
+        .home_ip
+            justify-content: space-between
+            align-items: center
+            display: flex
+            h1
+                font-size: 22px
+                font-weight: 800
+            p
+                font-size: 17px
+                
+
+.home
+    align-items: center
+    margin-top: 2%
+    display: flex
+    .text
+        margin-left: 1rem
+        h1
+            font-family: $roboto-mono
+            font-weight: 900
+            margin-top: -2rem
+            margin-bottom: 1rem
+            font-size: 40px
+            width: 70%
+
+.text
+    p
+        font-family: $roboto-slab
+        font-weight: 500
+        font-size: 24px
+        width: 70%
+
+.image
+    img
+        width: 670px
+
+.ip_domain
+    .ip_dns
+        p
+            font-family: $roboto-mono
+            text-align: center
+            margin-top: 20px
+            font-size: 30px
+    .input_search
+        justify-content: center
+        align-items: center
+        margin-top: 2.5rem
+        display: flex
+        gap: 8px
+
+#ip_dnsSearch
+    padding: 10px 320px 10px 12px
+    border-color: #3f3d56b3
+    font-family: $roboto
+    border-style: solid
+    border-radius: 5px
+    border-width: 3px
+    font-weight: 700
+    font-size: 18px
+    color: #000
+
+#search
+    padding: 12px 40px 12px 40px
+    background-color: #1B9105
+    font-family: $roboto-slab
+    border-style: none
+    border-radius: 5px
+    font-size: 20px
+    cursor: pointer
+    outline: none
+    color: #fff
+
+    &:hover
+        filter: brightness(0.8)
+    &:active
+        transform: scale(.9)
+
+.result_ipcats
+    font-family: $roboto-slab
+    margin-bottom: 4rem
+    align-items: center
+    text-align: center
+    margin-top: 4rem
+    display: flex
+    hr
+        border-bottom: 2.8rem
+        border-style: solid
+        border-top: 2.8rem
+
+.city_estate, .ips_domains, .continent, .país
+    margin: 0 auto
+    h1
+        font-size: 25px
+    p
+        font-size: 0.85rem
+        font-weight: 700
+        color: #403C3C
+
+#info, #pa
+    justify-content: center
+    display: flex
+    span
+        img
+            width: 38px
+            margin-right: 6px
+
+.container_map
+    margin: 0 auto
+    position: relative
+    height: 65vh
+    width: 75vw
+    #map
+        margin-bottom: 5rem
+        margin-top: -3rem
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+
+#noinput
+    text-align: left
+    margin-left: 20%
+    font-size: 20px
+    margin-top: 1%
+    margin-bottom: -3%
+    color: red
+   
+@keyframes name
+    0%
+        padding-top: 40px
+        opacity: 1
+    100%    
+        opacity: 1
+
+
