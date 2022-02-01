@@ -1,11 +1,12 @@
 import styled from "styled-components"
 
 export const SearchStyle = styled.div`
-
+  display: block;
+  font-family: var(--roboto-slab);
 `;
 
 export const SearchText = styled.div`
-  font-family: 'Roboto Mono';
+  font-family: var(--roboto-mono), monospace;
   text-align: center;
   font-size: 30px;
 
@@ -22,7 +23,7 @@ export const SearchInput = styled.div`
   .search {
     padding: 0.625rem 20rem 0.625rem 0.75rem;
 
-    font-family: 'Roboto Slab';
+    font-family: var(--roboto), monospace;
     font-size: 18px;
 
     border-color: #3f3d56b3;
@@ -41,7 +42,7 @@ export const SearchInput = styled.div`
     
     background-color: #1B9105;
 
-    font-family: 'Roboto Slab';
+    font-family: var(--roboto-slab), monospace;
     font-size: 20px;
 
     border-style: none;
@@ -64,17 +65,30 @@ export const SearchInput = styled.div`
 `;
 
 export const ResultSearch = styled.div`
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  font-family: var(--roboto-slab), monospace;
+  align-items: center;
   text-align: center;
   display: flex;
 
+  hr {
+    border-top: 4.2rem;
+    border-style: solid;
+    border-bottom: 4.2rem;
+  }
+
   h1 {
-    font-family: 'Roboto';
     font-weight: 700;
     font-size: 0.85rem;
+    color: #403C3C
   }
 
   p {
-    font-size: 25px;
+    font-weight: 700;
+    font-size: 28px
   }
   
   .cityEstate, 
@@ -82,6 +96,5 @@ export const ResultSearch = styled.div`
   .continent, 
   .country {
     margin: 0 auto;
-    margin-top: 2rem;
   }
 `;

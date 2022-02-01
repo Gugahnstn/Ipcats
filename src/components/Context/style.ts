@@ -6,10 +6,9 @@ export const ContextStyle = styled.div`
 `;
 
 export const ContextStyleText = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
   h1 {
-    font-family: "Roboto Mono";
+    font-family: monospace;
     margin-bottom: 1rem;
     font-weight: 900;
     font-size: 48px;
@@ -17,7 +16,7 @@ export const ContextStyleText = styled.div`
   }
 
   p {
-    font-family: "Roboto Slab";
+    font-family: monospace;
     font-weight: 500;
     font-size: 24px;
   }

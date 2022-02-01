@@ -1,15 +1,11 @@
-import Header from "./components/Header";
 import { GlobalStyle, Container } from "./style";
-import Context from "./components/Context";
-import Search from "./components/Search";
+import LandingPage from "./pages/LandingPage";
 
 const App = () => {
   return (
     <Container>
       <GlobalStyle />
-      <Header />
-      <Context />
-      <Search />
+      <LandingPage />
     </Container>
   );
 }
