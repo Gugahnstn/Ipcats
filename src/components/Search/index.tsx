@@ -1,6 +1,6 @@
 import { SearchStyle, SearchText ,SearchInput, ResultSearch } from "./style";
+import { useState, useEffect, HtmlHTMLAttributes } from "react";
 import ServiceIpApi from "../../services/ServiceIpApi";
-import { useState, useEffect } from "react";
 
 const Search = () => {
   const [city, setCity] = useState<string|null>(null);
@@ -10,26 +10,25 @@ const Search = () => {
   const [country, setCountry] = useState<string|null>(null);
   
   useEffect(()=>{
-    let searchButton = document.querySelector('.searchButton');
-    let search = document.querySelector('.search');
-
+    let searchButton = document.querySelector('.searchButton') as HTMLElement;
+    let search = document.querySelector('.search') as HTMLElement;
+    
     let consultIpApi = async () => {
-      let ipApi = await ServiceIpApi('' + search.value);
+      let ipApi = await ServiceIpApi('' + search);
 
       setCity(ipApi.city);
       setEstate(ipApi.region);
       setQuery(ipApi.query);
       setContinent(ipApi.continent);
-      setCountry(ipApi.country)
-    }
+      setCountry(ipApi.country);
+    };
     
     searchButton?.addEventListener('click', consultIpApi);
-    search?.addEventListener('keypress', (event) => {
-      if(event.keyCode == 'enter') {
+    search?.addEventListener('keypress', (event: KeyboardEvent): void => {
+      if(event.key == 'enter'){
         consultIpApi();
-      }
-    } );
-
+      };
+    });
   }, []);
 
   return(
