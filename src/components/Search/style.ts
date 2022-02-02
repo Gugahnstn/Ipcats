@@ -69,7 +69,6 @@ export const ResultSearch = styled.div`
   margin-top: 4rem;
   margin-bottom: 4rem;
 
-  font-family: var(--roboto-slab), monospace;
   align-items: center;
   text-align: center;
   display: flex;
@@ -81,12 +80,14 @@ export const ResultSearch = styled.div`
   }
 
   h1 {
+    font-family: var(--roboto-slab), monospace;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 1.125rem;
     color: #403C3C
   }
 
   p {
+    font-family: var(--roboto-slab), monospace;
     font-weight: 700;
     font-size: 28px
   }

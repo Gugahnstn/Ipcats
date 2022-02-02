@@ -1,7 +1,7 @@
 import Header from "../../components/Header"
 import Context from "../../components/Context"
 import Search from "../../components/Search"
-import CompoMap from "../../components/CompoMap"
+// import CompoMap from "../../components/CompoMap"
 
 const LandingPage = () => {
   return(
@@ -9,7 +9,7 @@ const LandingPage = () => {
       <Header />
       <Context />
       <Search />
-      <CompoMap />
+      {/* <CompoMap /> */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 import { SearchStyle, SearchText ,SearchInput, ResultSearch } from "./style";
-import ServiceIpApi from "../../services/ServiceIpApi"
+import ServiceIpApi from "../../services/ServiceIpApi";
 import { useState, useEffect } from "react";
 
 const Search = () => {
@@ -12,14 +12,23 @@ const Search = () => {
   useEffect(()=>{
     let searchButton = document.querySelector('.searchButton');
     let search = document.querySelector('.search');
-    
+
     let consultIpApi = async () => {
-      let ipApi = await ServiceIpApi(`${search}`);
+      let ipApi = await ServiceIpApi('' + search.value);
+
       setCity(ipApi.city);
+      setEstate(ipApi.region);
+      setQuery(ipApi.query);
+      setContinent(ipApi.continent);
+      setCountry(ipApi.country)
     }
     
     searchButton?.addEventListener('click', consultIpApi);
-    search?.addEventListener('enter', consultIpApi);
+    search?.addEventListener('keypress', (event) => {
+      if(event.keyCode == 'enter') {
+        consultIpApi();
+      }
+    } );
 
   }, []);
 
@@ -36,22 +45,22 @@ const Search = () => {
         <hr />
         <div className="cityEstate">
           <h1>Cidade, Estado:</h1>
-          <p>SALVADOR-BA</p>
+          <p>{ !city ? "NENHUM" : `${city.toUpperCase()}-${estate?.toUpperCase()}` }</p>
         </div>
         <hr />
         <div className="query">
           <h1>IP/Domain:</h1>
-          <p>NENHUM</p>
+          <p>{ !query ? "NENHUM" : `${query}`}</p>
         </div>
         <hr />
         <div className="continent">
           <h1>Continente:</h1>
-          <p>NENHUM</p>
+          <p>{ !continent ? "NENHUM" : `${continent.toUpperCase()}` }</p>
         </div>
         <hr />
         <div className="country">
           <h1>País:</h1>
-          <p>NENHUM</p>
+          <p>{ !country ? "NENHUM" : `${country.toUpperCase()}`}</p>
         </div>
         <hr />
       </ResultSearch>

@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import ServiceIpApi from "../../services/ServiceIpApi";
+import { useState, useEffect } from "react";
 import { HeaderStyle } from "./style";
 
 const Header = () => {
