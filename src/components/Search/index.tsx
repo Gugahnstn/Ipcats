@@ -1,5 +1,5 @@
 import { SearchStyle, SearchText ,SearchInput, ResultSearch } from "./style";
-import { useState, useEffect, HtmlHTMLAttributes } from "react";
+import { useState, useEffect, ReactHTMLElement} from "react";
 import ServiceIpApi from "../../services/ServiceIpApi";
 
 const Search = () => {

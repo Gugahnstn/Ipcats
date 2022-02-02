@@ -1,6 +1,6 @@
 const ServiceIpApi = async (query: string) => {
   try {
-    let response = await fetch('http://ip-api.com/json/'+ query + '?fields=continent,country,region,city,lat,lon,query&lang=pt-BR');
+    let response = await fetch('https://ip-api.com/json/'+ query + '?fields=continent,country,region,city,lat,lon,query&lang=pt-BR');
     let data = await response.json();
     
     return data;
