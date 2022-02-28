@@ -1,12 +1,12 @@
-import { GlobalStyle, Container } from "./style";
 import LandingPage from "./pages/LandingPage";
+import { GlobalStyle } from "./style";
 
 const App = () => {
   return (
-    <Container>
+    <>
       <GlobalStyle />
       <LandingPage />
-    </Container>
+    </>
   );
 }
 
