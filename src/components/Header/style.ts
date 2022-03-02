@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const HeaderStyle = styled.div`
+  margin: 0.625rem; 
 
   div {
     justify-content: space-between;
@@ -10,11 +11,11 @@ export const HeaderStyle = styled.div`
   }
 
   div > h1 {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 800;
   }
 
   div > p {
-    font-size: 17px;
+    font-size: 0.925rem;
   }
 `;
