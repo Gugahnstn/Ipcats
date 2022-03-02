@@ -1,5 +1,5 @@
 import { SearchStyle, SearchText, SearchInput, ResultSearch } from "./style";
-import serviceIpApi from "../../services/services-viacep-api";
+import serviceIpApi from "../../services/service-ip-api";
 import { useState } from "react";
 
 const Search = () => {
@@ -69,7 +69,7 @@ const Search = () => {
         <div className="containerCountry">
           <h1>País:</h1>
           <div className="country">
-            <img src={`https://countryflagsapi.com/png/${flag}`} alt="" />
+            { flag && <img src={`https://countryflagsapi.com/png/${flag}`} alt="" /> }
             <p>{!country ? "NENHUM" : `${country.toUpperCase()}`}</p>
           </div>
         </div>
