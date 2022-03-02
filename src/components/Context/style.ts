@@ -11,14 +11,14 @@ export const ContextStyleText = styled.div`
     font-family: monospace;
     margin-bottom: 1rem;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 3rem;
     width: 30rem;
   }
 
   p {
     font-family: monospace;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 `;
 
