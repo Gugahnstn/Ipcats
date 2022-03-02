@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchIpUserApi } from "../../services/services-viacep-api"
+import { fetchIpUserApi } from "../../services/service-ip-api"
 import { HeaderStyle } from "./style";
 
 const Header = () => {
