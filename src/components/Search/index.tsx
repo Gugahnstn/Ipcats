@@ -24,7 +24,7 @@ const Search = () => {
   };
 
   function handleText(event) {
-    setSearch(event.target.value);
+    setSearch(event.target.value.trim());
   }
 
   function handleSubmit(event) {
