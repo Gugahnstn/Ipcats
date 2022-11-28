@@ -8,11 +8,7 @@ export async function fetchIpUserApi() {
   }
 }
 
-async function serviceIpApi(query){
-  if(query === '') {
-    query = await fetchIpUserApi();
-  }
-
+async function serviceIpApi(query: String){
   try {
     const response = await fetch('https://jolly-leaf-26e7.gustavonstn.workers.dev/json/'+query+'?lang=pt-BR&fields=continent,country,countryCode,region,city,regionName,lat,lon,query');
     const data = response.json();
