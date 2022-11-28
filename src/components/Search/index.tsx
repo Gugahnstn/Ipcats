@@ -1,81 +1,70 @@
-import { SearchStyle, SearchText, SearchInput, ResultSearch } from "./style";
-import serviceIpApi from "../../services/service-ip-api";
-import { useState } from "react";
+import useSearch from "../../modules/hooks/use-search";
+import * as S from "./style";
 
 const Search = () => {
-  const [continent, setContinent] = useState<string | null>(null);
-  const [country, setCountry] = useState<string | null>(null);
-  const [estate, setEstate] = useState<string | null>(null);
-  const [query, setQuery] = useState<string | null>(null);
-  const [city, setCity] = useState<string | null>(null);
-
-  const [flag, setFlag] = useState<string | null>(null);
-  const [search, setSearch] = useState("");
-
-  const apiIp = async () => {
-    const ipApi = await serviceIpApi(search);
-
-    setContinent(ipApi.continent);
-    setFlag(ipApi.countryCode);
-    setCountry(ipApi.country);
-    setEstate(ipApi.region);
-    setQuery(ipApi.query);
-    setCity(ipApi.city);
-  };
-
-  function handleText(event) {
-    setSearch(event.target.value.trim());
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    apiIp();
-  }
+  const { handleText, handleSubmit, data, search } = useSearch();
 
   return (
-    <SearchStyle>
-      <SearchText>
+    <S.Search>
+      <S.TextContainer>
         <p>DIGITE O IP/DOMINIO DESEJADO:</p>
-      </SearchText>
-      <SearchInput onSubmit={handleSubmit}>
-        <input
+      </S.TextContainer>
+      <S.FormSearch onSubmit={handleSubmit}>
+        <S.Input
           type="text"
-          className="search"
-          onChange={handleText}
           value={search}
+          onChange={handleText}
           placeholder="IP/DOMAINS"
         />
-        <button type="submit" className="searchButton">
+        <S.Button type="submit" className="searchButton">
           BUSCAR
-        </button>
-      </SearchInput>
-      <ResultSearch>
-        <hr />
-        <div className="cityEstate">
-          <h1>Cidade, Estado:</h1>
-          <p>{!city ? "NENHUM" : `${city.toUpperCase()}-${estate}`}</p>
-        </div>
-        <hr />
-        <div className="query">
-          <h1>IP/Domain:</h1>
-          <p>{!query ? "NENHUM" : `${query.toUpperCase()}`}</p>
-        </div>
-        <hr />
-        <div className="continent">
-          <h1>Continente:</h1>
-          <p>{!continent ? "NENHUM" : `${continent.toUpperCase()}`}</p>
-        </div>
-        <hr />
-        <div className="containerCountry">
-          <h1>País:</h1>
-          <div className="country">
-            { flag && <img src={`https://countryflagsapi.com/png/${flag}`} alt="" /> }
-            <p>{!country ? "NENHUM" : `${country.toUpperCase()}`}</p>
-          </div>
-        </div>
-        <hr />
-      </ResultSearch>
-    </SearchStyle>
+        </S.Button>
+      </S.FormSearch>
+      <S.SearchResult>
+        <S.SearchResultContainer>
+          <S.ResultsContainers className="Before-ResultContainer">
+            <S.Result>
+              <S.ResultTitle>Cidade, Estado:</S.ResultTitle>
+              <S.ResultPhrase>
+                {!data.city ? "NENHUM" : `${data.city}-${data.state}`}
+              </S.ResultPhrase>
+            </S.Result>
+          </S.ResultsContainers>
+          <S.ResultsContainers>
+            <S.Result>
+              <S.ResultTitle>IP / Domínio:</S.ResultTitle>
+              <S.ResultPhrase>
+                {!data.city ? "NENHUM" : data.query}
+              </S.ResultPhrase>
+            </S.Result>
+          </S.ResultsContainers>
+          <S.ResultsContainers>
+            <S.Result>
+              <S.ResultTitle>Continente:</S.ResultTitle>
+              <S.ResultPhrase>
+                {!data.city ? "NENHUM" : data.continent}
+              </S.ResultPhrase>
+            </S.Result>
+          </S.ResultsContainers>
+          <S.ResultsContainers>
+            <S.Result>
+              <S.ResultTitle>País:</S.ResultTitle>
+              <S.CountryContainer>
+                {data.flag && (
+                  <img
+                    className="country-flag"
+                    src={`https://countryflagsapi.com/png/${data.flag}`}
+                  />
+                )}
+                <S.ResultPhrase>
+                  {!data.city ? "NENHUM" : data.country}
+                </S.ResultPhrase>
+              </S.CountryContainer>
+            </S.Result>
+          </S.ResultsContainers>
+        </S.SearchResultContainer>
+      </S.SearchResult>
+    </S.Search>
   );
 };
 
