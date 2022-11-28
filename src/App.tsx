@@ -1,11 +1,11 @@
-import LandingPage from "./pages/LandingPage";
 import { GlobalStyle } from "./style";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <LandingPage />
+      <Home />
     </>
   );
 }
