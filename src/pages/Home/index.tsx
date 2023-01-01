@@ -1,17 +1,12 @@
-import Header from "../../components/Header"
-import Context from "../../components/Context"
-import Search from "../../components/Search"
-import { Container } from "./style"
-// import CompoMap from "../../components/CompoMap"
+import Header from '../../templates/Header';
+import Hero from '../../templates/Hero';
 
 const Home = () => {
-  return(
-    <Container>
+  return (
+    <>
       <Header />
-      <Context />
-      <Search />
-      {/* <CompoMap /> */}
-    </Container>
+      <Hero />
+    </>
   );
 }
 
