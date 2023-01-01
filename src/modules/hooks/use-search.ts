@@ -1,16 +1,9 @@
 import { ChangeEvent, FormEventHandler, useState } from "react";
-import serviceIpApi from "../../services/service-ip-api";
+import { serviceIpApi } from "../../services/ipUser";
 import { Data } from "../../types";
 
 export default function useSearch() {
-  const [data, setData] = useState<Data>({
-    continent: null,
-    country: null,
-    query: null,
-    state: null,
-    flag: null,
-    city: null
-  })
+  const [data, setData] = useState<Data>({} as Data);
 
   const [search, setSearch] = useState("");
 
@@ -39,7 +32,7 @@ export default function useSearch() {
   return {
     handleText,
     handleSubmit,
+    search,
     data,
-    search
   }
 }
