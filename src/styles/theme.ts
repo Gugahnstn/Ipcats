@@ -1,11 +1,13 @@
 const theme = {
   font: {
-    Inter: 'Inter'
+    Inter: 'Inter',
   },
   colors: {
     background: '#130604',
     primary: '#FF6B10',
-    text: '#FFFFFF'
+    secundary: '#FFB670',
+    textInput: '#FFD4A8',
+    text: '#FFFFFF',
   }
 }
 
