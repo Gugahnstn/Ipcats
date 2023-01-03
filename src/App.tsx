@@ -1,9 +1,7 @@
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "./styles/style";
+import { GlobalStyle } from "./styles/global";
 
 import theme from "./styles/theme";
-
-import Hero from "./templates/Hero";
 import Home from "./pages/Home";
 
 
@@ -14,6 +12,6 @@ const App = () => {
       <Home />
     </ThemeProvider>
   );
-}
+};
 
 export default App;
