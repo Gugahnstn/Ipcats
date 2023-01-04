@@ -1,6 +1,6 @@
 import worldConnection from '../../../public/images/worldconnection.svg';
 
-import { Container } from '../../styles/style';
+import { Container } from '../../styles/global';
 import * as S from './style';
 
 const Hero = () => {
