@@ -1,6 +1,6 @@
 import logo from "../../../public/images/Logo.svg";
 
-import { Container } from "../../styles/style";
+import { Container } from "../../styles/global";
 import * as S from "./style";
 
 const Header = () => {
