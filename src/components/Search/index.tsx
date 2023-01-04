@@ -3,20 +3,18 @@ import useSearch from "../../modules/hooks/use-search";
 import * as S from "./style";
 
 const Search = () => {
-  const { handleSubmit, handleText, search, data } = useSearch();
-
-  console.log(data)
+  const { handleSubmit, handleText, search} = useSearch();
 
   return (
     <S.SearchComponent>
       <S.SearchForm onSubmit={handleSubmit}>
         <S.SearchInput
-          placeholder="IP / DOMAIN"
+          placeholder="IP/DOMAIN"
           onChange={handleText}
           value={search}
           type="text"
         />
-        <S.SearchButton type="submit">Buscar</S.SearchButton>
+        <S.SearchButton type="submit">BUSCAR</S.SearchButton>
       </S.SearchForm>
     </S.SearchComponent>
   );
