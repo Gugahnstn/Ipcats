@@ -4,16 +4,7 @@ export const HeroComponent = styled.section`
   ${({ theme }) => css`
     font-family: ${theme.font.Inter};
     color: ${theme.colors.text};
-    /* justify-content: center; */
-    padding: 1.5rem 0rem;
-    /* align-items: center;
-    display: flex;
-    height: 120vh;
-    width: 100%; */
-
-    @media (max-width: 860px) {
-      padding: 0rem 0rem;  
-    }
+    padding-top: 10rem;
   `}
 `;
 
@@ -59,7 +50,8 @@ export const HeroTitle = styled.h1`
 
 export const HeroPhrase = styled.p`
   text-align: justify;
-  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: #BA9D9D;
   width: 30.5rem;
 
