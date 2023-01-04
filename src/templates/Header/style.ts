@@ -5,9 +5,9 @@ export const HeaderComponent = styled.header`
     box-shadow: 0px 4px 4px rgba(81, 42, 18, 0.1);
     background-color: ${theme.colors.background};
     font-family: ${theme.font.Inter};
+    
     position: fixed;
     width: 100%;
-    right: 0px;
     top: 0px;
   `};
 `;
