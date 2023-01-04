@@ -21,7 +21,7 @@ export const ContainerHeader = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 116px;
+  width: 7.25rem;
 `;
 
 export const TextIp = styled.p`
