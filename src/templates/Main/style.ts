@@ -20,3 +20,14 @@ export const Phrase = styled.p`
     }
   `}
 `;
+
+export const ResultComponent = styled.div`
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+
+  @media (max-width: 980px) {
+    padding: 0rem 4rem;
+    display: block;
+  }
+`
