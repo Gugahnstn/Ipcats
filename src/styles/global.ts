@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      font-family: ${theme.font.Inter};
+      font-family: ${theme.font.families.font_default};
       background-color: ${theme.colors.background};
     }
 
