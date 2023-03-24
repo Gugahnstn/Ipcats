@@ -1,4 +1,5 @@
 export interface CardType {
-  title?: String;
-  phrase?: String;
+  phrase?: string | null;
+  title?: string | null;
+  flag?: string | null;
 }

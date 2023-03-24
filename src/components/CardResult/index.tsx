@@ -1,19 +1,24 @@
 import { CardType } from "../../types/components";
 import * as S from "./style";
 
-const CardResult  = ({ title, phrase }: CardType) => {
+const CardResult = ({ title, phrase, flag }: CardType) => {
   return (
     <S.CardResultComponent>
+      <S.CardTitle>{title}</S.CardTitle>
       <S.CardResultContainer>
-        <S.ResultCardTitle>
-          { title }
-        </S.ResultCardTitle>
+        {!flag ? (
+          <></>
+        ) : (
+          <S.FlagImage src={`https://countryflagsapi.com/svg/${flag}`} />
+        )}
+        <S.CardPhrase>
+          {!phrase || phrase == undefined + "-" + undefined || undefined
+            ? "OFFLINE"
+            : phrase}
+        </S.CardPhrase>
       </S.CardResultContainer>
-      <S.ResultCardPhrase>
-        { phrase }
-      </S.ResultCardPhrase>
     </S.CardResultComponent>
   );
-}
+};
 
 export default CardResult;
