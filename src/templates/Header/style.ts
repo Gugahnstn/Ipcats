@@ -4,7 +4,7 @@ export const HeaderComponent = styled.header`
   ${({ theme }) => css`
     box-shadow: 0px 4px 4px rgba(81, 42, 18, 0.1);
     background-color: ${theme.colors.background};
-    font-family: ${theme.font.Inter};
+    font-family: ${theme.font.families.font_default};
     
     position: fixed;
     width: 100%;
