@@ -1,9 +1,12 @@
-import logo from "../../../public/images/Logo.svg";
+import logo from "../../assets/images/Logo.svg";
 
 import { Container } from "../../styles/global";
+import { useState } from "react";
 import * as S from "./style";
 
 const Header = () => {
+  const [ query, setQuery ] = useState<string|null>();
+  
   return (
     <S.HeaderComponent>
       <Container>
