@@ -23,7 +23,7 @@ const Header = () => {
         <S.ContainerHeader>
           <S.Image src={logo} />
           <S.TextIp>
-            IP: <S.SpanTextIp>{ !query ? "000.000.000" : query }</S.SpanTextIp>
+            IP: <S.SpanTextIp>{ !query ? query : "000.000.000" }</S.SpanTextIp>
           </S.TextIp>
         </S.ContainerHeader>
       </Container>
