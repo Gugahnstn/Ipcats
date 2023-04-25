@@ -1,16 +1,16 @@
+import { useEffect } from "react";
 import CardResult from "../../components/CardResult";
 import Search from "../../components/Search";
 
 import useSearch from "../../hooks/use-search";
 import { Container } from "../../styles/global";
-import { useEffect } from "react";
 import * as S from "./style";
 
 const Main = () => {
   const { data } = useSearch();
-  
+
   useEffect(() => {
-    console.log("teste: ", data);
+    console.log("Dados:", data);
   }, [data]);
   
   return ( 
