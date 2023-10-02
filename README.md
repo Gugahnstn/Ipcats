@@ -1,4 +1,4 @@
-# Ipcats - Busque as informações de um Ip e dominio.
+# Ipcats - Obtenha informações de um endereço IP e de um domínio.
 
 
 O IPCats é um site dedicado à busca de informações de IPs e domínios. Nosso sistema oferece uma ampla gama de recursos, incluindo uma funcionalidade de pesquisa abrangente e um mapa que indica a localização do provedor do IP ou domínio em questão.
