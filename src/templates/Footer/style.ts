@@ -9,8 +9,7 @@ export const FooterComponent = styled.footer`
 export const FooterTopComponent = styled.div`
   border-bottom: 1px #6B6B6B solid;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
-  padding: 0rem 0.5rem;
+  padding: 1rem 0.5rem;
   display: flex;
 `;
 
@@ -29,7 +28,7 @@ export const Icons = styled.img`
 `
 
 export const FooterBottomComponent = styled.div`
-  padding-top: 0.5rem;
+  padding: 1rem 0rem;
   text-align: center;
   color: #FFFFFF;
 `;
