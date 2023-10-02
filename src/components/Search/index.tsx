@@ -1,4 +1,4 @@
-import { BiSearchAlt2 } from "react-icons/all";
+import { BiSearchAlt2 } from "react-icons/bi";
 
 import useSearch from "../../hooks/use-search";
 import * as S from "./style";
