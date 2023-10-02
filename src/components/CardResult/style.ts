@@ -47,11 +47,11 @@ export const CardPhrase = styled.p`
     color: ${theme.colors.result};
     text-align: center;
     font-weight: 700;
+    white-space: nowrap;
 
     ::after {
       content: attr(data-text);
-      font-size: calc(${theme.font.sizes.text_lg} - 0.1rem * (attr(data-text) - 10));
-      white-space: nowrap;
+      font-size: calc(1.5rem - 0.1rem * (attr(data-text) - 10));
     }
   `}
 `;
