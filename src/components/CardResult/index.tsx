@@ -9,7 +9,7 @@ const CardResult = ({ title, phrase, flag }: CardType) => {
         {!flag ? (
           <></>
         ) : (
-          <S.FlagImage src={`https://countryflagsapi.com/svg/${flag}`} />
+          <S.FlagImage src={`https://flagsapi.com/${flag}/flat/64.png`} />
         )}
         <S.CardPhrase>
           {!phrase || phrase == undefined + "-" + undefined || undefined

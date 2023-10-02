@@ -7,6 +7,7 @@ import {
 } from "react";
 import serviceIpApi from "../services/service-ip-api";
 import { Data, ipSearchType } from "../types";
+import searchIp from "../services/search-ip";
 
 export const IpSearchContext = createContext({} as ipSearchType);
 
@@ -15,8 +16,9 @@ export const IpSearchProvider = ({ children }: PropsWithChildren) => {
   const [search, setSearch] = useState("");
 
   const settingIpApi = async () => {
-    const getServiceIpApi = await serviceIpApi(search);
-    console.log("olá");
+    const query = await searchIp();
+    const requestDomainAndIp = search || query;
+    const getServiceIpApi = await serviceIpApi(requestDomainAndIp);
     setData({
       continent: getServiceIpApi.continent,
       flag: getServiceIpApi.countryCode,

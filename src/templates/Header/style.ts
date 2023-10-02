@@ -8,6 +8,7 @@ export const HeaderComponent = styled.header`
     
     position: fixed;
     width: 100%;
+    z-index: 1;
     top: 0px;
   `};
 `;

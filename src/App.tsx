@@ -5,7 +5,6 @@ import { GlobalStyle } from "./styles/global";
 import theme from "./styles/theme";
 import Home from "./screens/Home";
 
-
 const App = () => {
   return (
     <IpSearchProvider>
