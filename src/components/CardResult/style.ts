@@ -43,7 +43,6 @@ export const CardTitle = styled.h1`
 
 export const CardPhrase = styled.p`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.text_lg};
     color: ${theme.colors.result};
     text-align: center;
     font-weight: 700;
@@ -51,7 +50,7 @@ export const CardPhrase = styled.p`
 
     ::after {
       content: attr(data-text);
-      font-size: calc(1.5rem - 0.1rem * (attr(data-text) - 10));
+      font-size: calc(1rem - 0.1rem * (attr(data-text) - 10));
     }
   `}
 `;
