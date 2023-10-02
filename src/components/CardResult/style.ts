@@ -47,5 +47,10 @@ export const CardPhrase = styled.p`
     color: ${theme.colors.result};
     text-align: center;
     font-weight: 700;
+
+    ::after {
+      content: attr(data-text);
+      font-size: calc(${theme.font.sizes.text_lg} - 0.1rem * (attr(data-text) - 10));
+    }
   `}
 `;
