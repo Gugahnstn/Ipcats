@@ -51,6 +51,7 @@ export const CardPhrase = styled.p`
     &::after {
       content: attr(data-text);
       font-size: calc(${theme.font.sizes.text_lg} - 0.1rem * (attr(data-text) - 10));
+      white-space: nowrap;
     }
   `}
 `;
