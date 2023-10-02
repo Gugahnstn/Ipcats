@@ -31,12 +31,14 @@ export const SearchMap = ({ longitude, latitude }: SearchMapProps) => {
   }, [longitude, latitude]);
 
   return (
+    <div>
       <Map
         mapLib={import("mapbox-gl")}
         initialViewState={{ ...viewPort }}
         style={{ width: screenWidth, height: 420}}
         mapStyle="mapbox://styles/mapbox/streets-v10"
         mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN} />
+    </div>
   );
 };
 
