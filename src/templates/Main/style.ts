@@ -31,4 +31,15 @@ export const ResultComponent = styled.div`
     padding: 0rem 2rem;
     display: block;
   }
-`
+`;
+
+export const ContainerSearchMap = styled.div`
+  justify-content: center;
+  margin-top: 2rem;
+  display: flex;
+  height: 420px;
+
+  @media (max-width: 920px) {
+    width: 100%;
+  }
+`;
