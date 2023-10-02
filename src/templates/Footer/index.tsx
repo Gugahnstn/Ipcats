@@ -10,10 +10,10 @@ const Footer = () => {
       <S.FooterTopComponent>
         <img src={Logo} alt="Logo do Ipcats" />
         <S.IconsComponent>
-          <S.Links>
+          <S.Links href="https://www.bohr.io">
             <S.Icons src={ BohrLogo } alt="logo do bohr.io"/>
           </S.Links>
-          <S.Links>
+          <S.Links href="https://www.github.com/Gugahnstn/Ipcats">
             <S.Icons src={ GithubLogo } alt="logo do Github" />
           </S.Links>
         </S.IconsComponent>
